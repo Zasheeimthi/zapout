@@ -11389,7 +11389,7 @@ label {
 /* Singular Headings */
 h1,
 .h1 {
-  font-size: 80px;
+  font-size: 70px;
   line-height: 90px;
   color: #000;
   font-weight: 700;
@@ -12023,7 +12023,7 @@ li.show .dropdown-menu {
 
 .red-box-info h4,
 .red-box-info .h4 {
-  font-size: 60px;
+  font-size: 55px;
   font-weight: 700;
   color: #fff;
   line-height: 70px;
@@ -12254,7 +12254,7 @@ form button:hover img {
 
 .about-banner p {
   font-size: 20px;
-  line-height: 32px;
+  line-height: 25px;
   padding-bottom: 20px;
 }
 
