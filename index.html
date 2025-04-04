@@ -11,6 +11,8 @@
   <title>Zapout - Smart Swish-betalningar för företag.</title>
   <link href="images/icons/favicon.svg" rel="shortcut icon" type="image/x-icon">
   <!-- Singular External CSS -->
+  <link href="css/faq.css" rel="stylesheet" type="text/css" media="all">
+  <link href="css/app.css" rel="stylesheet" type="text/css" media="all">
   <link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
   <link href="css/loaders.min.css" rel="stylesheet" type="text/css" media="all">
   <link href="css/animation.css" rel="stylesheet" type="text/css" media="all">
@@ -418,6 +420,76 @@
     </div>
   </section>
 
+  <section id="">
+    <div class="faq-container">
+      <div class="faq-header">
+          <h2>Vanliga frågor (FAQ)</h2>
+          <p>Hitta svar på vanliga frågor om våra produkter och tjänster.</p>
+      </div>
+      
+      <div class="faq-item">
+          <div class="faq-question">Vad är Swish Företag Utbetalning?</div>
+          <div class="faq-answer">
+              <p>Det är bankernas tjänst för att företag ska kunna skicka pengar direkt till en kunds Swish. Det kräver ett Swish Företag-konto och teknisk integration via certifikat.</p>
+          </div>
+      </div>
+      
+      <div class="faq-item">
+          <div class="faq-question">Behöver jag ha Swish Företag redan?</div>
+          <div class="faq-answer">
+              <p>Ja. Zapout fungerar som ett gränssnitt ovanpå Swish Företag Utbetalning. Du behåller din bankkontakt och dina avtal.
+              </p>
+          </div>
+      </div>
+      
+      <div class="faq-item">
+          <div class="faq-question">Vad kostar varje transaktion?</div>
+          <div class="faq-answer">
+              <p>Zapout tar ingen transaktionsavgift. Du betalar endast vad din bank tar för Swish-utbetalningarna.</p>
+          </div>
+      </div>
+      
+      <div class="faq-item">
+          <div class="faq-question">Är Zapout säkert?</div>
+          <div class="faq-answer">
+              <p>Ja. Vi använder krypterad certifikathantering, BankID för inloggning, SMS-verifiering, rollstyrning och exportbar logg – allt lagras enligt GDPR i Sverige.</p>
+          </div>
+      </div>
+      
+      <div class="faq-item">
+          <div class="faq-question">Kan vi använda Zapout från flera datorer och kontor?</div>
+          <div class="faq-answer">
+              <p>Absolut. Zapout är molnbaserat. Du kan ha flera användare med olika roller – t.ex. support, ekonomi och ledning.</p>
+          </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Hur snabbt kommer pengarna fram till kunden?</div>
+        <div class="faq-answer">
+            <p>Direkt. Swish-utbetalningar sker i realtid – även kvällar och helger.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Hur lång tid tar det att komma igång?</div>
+      <div class="faq-answer">
+          <p>Du kan vara igång på en dag – så snart ditt företag har tillgång till sitt Swish Företag-certifikat.</p>
+      </div>
+   </div>
+
+   <div class="faq-item">
+    <div class="faq-question">Krävs någon installation?</div>
+    <div class="faq-answer">
+        <p>Nej. Zapout är helt webbaserat. Ingen lokal installation krävs.</p>
+    </div>
+ </div>
+
+  </div>
+
+
+
+  </section>
+
 
   <section class="singular-contact-us pt-100" id="kontakta">
     <div class="container">
@@ -533,7 +605,22 @@
   </div>
 
   <!-- Singular Scripts -->
-   
+  <script>
+    // JavaScript for FAQ functionality
+    document.querySelectorAll('.faq-question').forEach(question => {
+        question.addEventListener('click', () => {
+            const item = question.parentNode;
+            item.classList.toggle('active');
+            
+            // Close other open items
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                }
+            });
+        });
+    });
+</script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/html5.min.js"></script>
   <script src="js/wow.min.js"></script>
